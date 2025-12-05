@@ -1,0 +1,72 @@
+================================================================================
+REAL TIME STANCER - INSTALLATION GUIDE
+================================================================================
+
+REQUIREMENTS:
+- Assetto Corsa
+- Custom Shaders Patch (CSP) version 0.1.80 or higher
+- Lua scripting enabled in CSP settings
+
+================================================================================
+
+INSTALLATION STEPS:
+
+1. Locate your Assetto Corsa installation folder
+   Typical locations:
+   - Steam: C:\Program Files (x86)\Steam\steamapps\common\assettocorsa
+   - Standard: C:\Program Files\Assetto Corsa
+
+2. Copy the "content" folder from this package into your Assetto Corsa folder
+   The final path should be:
+   [Assetto Corsa]\content\apps\lua\RealTimeStancer\
+
+3. Verify the following files are present:
+   [Assetto Corsa]\content\apps\lua\RealTimeStancer\app.lua
+   [Assetto Corsa]\content\apps\lua\RealTimeStancer\manifest.ini
+   [Assetto Corsa]\content\apps\lua\RealTimeStancer\icon.png
+   [Assetto Corsa]\content\apps\lua\RealTimeStancer\config_presets.json
+   [Assetto Corsa]\content\apps\lua\RealTimeStancer\ui\layout.ini
+
+4. Launch Assetto Corsa
+
+5. Enable the app:
+   - In-game, open the apps menu (right side of screen)
+   - OR press Ctrl+Shift+S to toggle the app
+
+================================================================================
+
+QUICK START:
+
+1. Start a race or practice session (NOT showroom mode)
+2. Press Ctrl+Shift+S to open Real Time Stancer
+3. Select "All Wheels" or individual wheel
+4. Adjust sliders to modify stance
+5. Changes apply in real-time!
+
+================================================================================
+
+TROUBLESHOOTING:
+
+Problem: App doesn't appear
+Solution:
+- Check CSP version (must be 0.1.80+)
+- Enable Lua scripting in CSP settings
+- Check logs in: Documents\Assetto Corsa\logs\
+
+Problem: Adjustments don't work
+Solution:
+- Make sure you're in driving mode (not showroom)
+- Click the "Apply" button
+- Try resetting and reapplying
+
+Problem: Can't save presets
+Solution:
+- Check folder permissions
+- Run AC as administrator
+- Verify config_presets.json exists
+
+================================================================================
+
+For detailed instructions, see README.md
+
+================================================================================

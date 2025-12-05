@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Stancer - Assetto Corsa Mod</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .hero {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.4);
+        }
+
+        .download-btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,107,107,0.6);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .feature-card p {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .requirements {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .requirements h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .requirements ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .requirements li {
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .requirements li:before {
+            content: "✓";
+            position: absolute;
+            left: -20px;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .screenshots {
+            margin: 40px 0;
+        }
+
+        .screenshots h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffd700;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .screenshot {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .screenshot img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .installation {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .installation h2 {
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .installation ol {
+            padding-left: 25px;
+        }
+
+        .installation li {
+            padding: 10px 0;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            opacity: 0.8;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .download-btn {
+                font-size: 1.2em;
+                padding: 15px 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏎️ Real Time Stancer</h1>
+            <p class="subtitle">Professional Stance Tuning for Assetto Corsa</p>
+            <div style="margin-top: 15px;">
+                <span class="badge">v1.0</span>
+                <span class="badge">CSP Lua</span>
+                <span class="badge">Real-time</span>
+            </div>
+        </header>
+
+        <div class="hero">
+            <h2 style="text-align: center; margin-bottom: 20px;">The Ultimate VStancer for Assetto Corsa</h2>
+            <p style="text-align: center; font-size: 1.1em; line-height: 1.8;">
+                Transform your car's stance in real-time without reloading. Adjust wheel offset, track width,
+                camber, and ride height with precision. Save unlimited presets and switch between them instantly.
+            </p>
+        </div>
+
+        <div class="download-section">
+            <a href="./RealTimeStancer_v1.0.zip" class="download-btn" download>
+                ⬇️ Download Now
+            </a>
+            <p style="margin-top: 15px; opacity: 0.9;">Version 1.0 • Free & Open Source</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>⚡ Real-Time Adjustments</h3>
+                <p>Modify your car's stance instantly during gameplay. No car reload required. See changes applied immediately as you adjust sliders.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎯 Per-Wheel Control</h3>
+                <p>Adjust each wheel individually or all wheels simultaneously. Perfect for creating aggressive stances or track-ready setups.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💾 Preset System</h3>
+                <p>Save unlimited stance configurations and switch between them with one click. Perfect for different driving styles and occasions.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎚️ Precise Controls</h3>
+                <p>Fine-tune wheel offset, track width, camber angle, and visual ride height with precise slider controls and reset buttons.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔧 Global Multiplier</h3>
+                <p>Scale all adjustments simultaneously with the global multiplier. Perfect for quick stance variations without losing proportions.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎨 Clean Interface</h3>
+                <p>Intuitive in-game GUI that doesn't obstruct your view. Toggle with Ctrl+Shift+S for quick access during sessions.</p>
+            </div>
+        </div>
+
+        <div class="requirements">
+            <h2>📋 Requirements</h2>
+            <ul>
+                <li>Assetto Corsa (base game)</li>
+                <li>Custom Shaders Patch (CSP) version 0.1.80 or higher</li>
+                <li>Lua scripting enabled in CSP settings</li>
+                <li>Content Manager (recommended)</li>
+            </ul>
+        </div>
+
+        <div class="installation">
+            <h2>🚀 Installation Guide</h2>
+            <ol>
+                <li><strong>Download</strong> the RealTimeStancer_v1.0.zip file</li>
+                <li><strong>Extract</strong> the archive to get the content folder</li>
+                <li><strong>Copy</strong> the content folder to your Assetto Corsa installation directory</li>
+                <li><strong>Launch</strong> Assetto Corsa with CSP enabled</li>
+                <li><strong>Start</strong> a race or practice session (not showroom)</li>
+                <li><strong>Press</strong> Ctrl+Shift+S to open the app</li>
+                <li><strong>Adjust</strong> and enjoy your custom stance!</li>
+            </ol>
+        </div>
+
+        <div class="hero">
+            <h2 style="margin-bottom: 20px;">📝 Quick Start Guide</h2>
+            <div style="line-height: 2;">
+                <p><strong>Wheel Selection:</strong> Choose "All Wheels" or individual wheels (FL/FR/RL/RR)</p>
+                <p><strong>Offset:</strong> -100 to +100mm (positive = outward)</p>
+                <p><strong>Track Width:</strong> -50 to +50mm</p>
+                <p><strong>Camber:</strong> -10° to +10° (negative = aggressive tilt)</p>
+                <p><strong>Ride Height:</strong> -100 to +50mm (negative = lower)</p>
+                <p><strong>Save Presets:</strong> Name your setup and click "Save Preset"</p>
+                <p><strong>Load Presets:</strong> Click "Load" next to any saved preset</p>
+            </div>
+        </div>
+
+        <div class="hero">
+            <h2 style="margin-bottom: 20px;">🎨 Example Stance Setups</h2>
+
+            <div style="margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px;">
+                <h3 style="color: #ffd700; margin-bottom: 10px;">Aggressive Street Stance</h3>
+                <p>Offset: +30mm all wheels</p>
+                <p>Camber: -3° front, -2° rear</p>
+                <p>Ride Height: -40mm all wheels</p>
+            </div>
+
+            <div style="margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px;">
+                <h3 style="color: #ffd700; margin-bottom: 10px;">Track Day Setup</h3>
+                <p>Camber: -2.5° all wheels</p>
+                <p>Ride Height: -20mm all wheels</p>
+                <p>Track Width: +10mm all wheels</p>
+            </div>
+
+            <div style="margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 10px;">
+                <h3 style="color: #ffd700; margin-bottom: 10px;">Show Car Slammed</h3>
+                <p>Offset: +50mm all wheels</p>
+                <p>Camber: -5° all wheels</p>
+                <p>Ride Height: -80mm all wheels</p>
+            </div>
+        </div>
+
+        <div class="requirements">
+            <h2>🛠️ Troubleshooting</h2>
+            <ul>
+                <li><strong>App doesn't appear:</strong> Check CSP version (0.1.80+) and enable Lua scripting in settings</li>
+                <li><strong>Adjustments not visible:</strong> Ensure you're in driving mode (not showroom), click "Apply" button</li>
+                <li><strong>Presets not saving:</strong> Check folder permissions, run AC as administrator if needed</li>
+                <li><strong>Check logs:</strong> Documents\Assetto Corsa\logs\ for detailed error messages</li>
+            </ul>
+        </div>
+
+        <div class="hero">
+            <h2 style="margin-bottom: 20px;">⚠️ Important Notes</h2>
+            <p style="line-height: 1.8;">
+                • All adjustments are <strong>visual only</strong> and don't affect physics<br>
+                • Works in driving mode, not in showroom mode<br>
+                • Presets are saved automatically to config_presets.json<br>
+                • Toggle app anytime with <strong>Ctrl+Shift+S</strong><br>
+                • Compatible with all CSP 0.1.80+ versions<br>
+                • Free to use and modify - credit appreciated but not required
+            </p>
+        </div>
+
+        <footer>
+            <p style="font-size: 1.2em; margin-bottom: 10px;">Made for the Assetto Corsa Community</p>
+            <p>Real Time Stancer v1.0 • 2024</p>
+            <p style="margin-top: 15px;">🏁 Enjoy your custom stance! 🏁</p>
+        </footer>
+    </div>
+</body>
+</html>
